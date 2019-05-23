@@ -1,32 +1,42 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
-
+import java.util.Random;
+import java.util.Scanner;
 /**
- * A class that fills a magic hand of 7 cards with random Card Objects
- * and then asks the user to pick a card and searches the array of cards
- * for the match to the user's card. To be used as starting code in ICE 1
+
  * @author dancye
+ * Modified by Brent Sterling
+ *
  */
-public class CardTrick {
-    
-    public static void main(String[] args)
-    {
-        Card[] magicHand = new Card[7];
-        
-        for (int i=0; i<magicHand.length; i++)
-        {
-            Card c = new Card();
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-        }
-        
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
-    }
-    
+public class CardTrick
+{
+   public static void main (String[] args)
+   {
+      Card[] magicHand = new Card[7];
+      Random rnd = new Random();
+      Scanner in = new Scanner(System.in);
+       for (Card magicHand1 : magicHand) {
+           Card c = new Card();
+           c.setValue(rnd.nextInt(12) + 1);
+           c.setSuit(Card.SUITS[rnd.nextInt(3)]);
+       }
+       Scanner Scanner = new Scanner(System.in);
+       String c2 = Scanner.next();
+      
+
+      boolean inhand = false;
+
+       for (Card magicHand1 : magicHand) {
+           if (c2.equalCard(magicHand1)) {
+               inhand = true;
+           }
+       }
+      if (inhand) {
+         System.out.println("Congrats, you won");
+      }
+      else {
+         System.out.println("Sorry, try again");
+      }
+
+   }
+
 }
