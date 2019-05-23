@@ -22,7 +22,12 @@ public class CardTrick {
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
             
-            Random rand = new Random();
+            // Lucky card object
+            Card luckyCard = new Card();
+            luckyCard.setValue(1);
+            luckyCard.setSuit("Hearts")
+                
+            Random rand = new Random();          
             c.setSuit(Card.SUITS[rand.nextInt(4)]);
             c.setValue(rand.nextInt(13));
 
