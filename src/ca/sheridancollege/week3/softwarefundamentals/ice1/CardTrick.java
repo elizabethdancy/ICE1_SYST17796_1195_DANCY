@@ -12,6 +12,7 @@ import java.util.Scanner;
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
+ * @author Muaz Ahmad
  */
 public class CardTrick {
     
@@ -20,6 +21,9 @@ public class CardTrick {
         Card[] magicHand = new Card[7];
         Scanner sc = new Scanner(System.in);
         
+        Card luckyCard = new Card();
+        luckyCard.setValue(1);
+        luckyCard.setSuit("Clubs");
         
          int random = 0;
          int random2 = 0; 
