@@ -30,15 +30,19 @@ public class CardTrick
          magicHand[i] = c;
       }
 
-      Card c1 = new Card();
-      System.out.println("Choose a card number:");
-      int card = scan.nextInt();
-      System.out.println("Your card number is: " + card);
-      System.out.println("Choose a suit:");
-      String suit = scan.nextLine();
-      System.out.println("Your suit is: " + suit);
-      c1.setValue(card);
-      c1.setSuit(suit);
+//       Card c1 = new Card();
+//       System.out.println("Choose a card number:");
+//       int card = scan.nextInt();
+//       System.out.println("Your card number is: " + card);
+//       System.out.println("Choose a suit:");
+//       String suit = scan.nextLine();
+//       System.out.println("Your suit is: " + suit);
+//       c1.setValue(card);
+//       c1.setSuit(suit);
+      
+            Card luckyCard = new Card();
+      luckyCard.setValue(6);
+      luckyCard.setSuit("hearts");
 
 
       //insert code to ask the user for Card value and suit, create their card
