@@ -13,7 +13,8 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * This code is to be used in ICE1. When you create your own branch,
  * add your name as a modifier
  hello.
- * @author lamsteve
+ * @author dancye
+ * @modified hoangjam
  */
 public class Card {
 
@@ -48,7 +49,5 @@ public class Card {
     public void setValue(int value) {
         this.value = value;
     }
-   
-   
     
 }
