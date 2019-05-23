@@ -52,6 +52,16 @@ public class CardTrick {
                 break;
             }
         }
+        
+        for (Card magicHand1 : magicHand) {
+            if (magicHand1.getSuit().equals(luckyCard.getSuit()) && magicHand1.getValue() == luckyCard.getValue()) {
+                System.out.println("Congrats! Your card is really lucky!");
+                break;
+            } else {
+                System.out.println("Your card is not in the magic hand :(");
+                break;
+            }
+        }
     }   
             
 }
