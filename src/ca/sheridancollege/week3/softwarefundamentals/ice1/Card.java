@@ -11,7 +11,7 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * A suit (clubs, hearts, spades, diamonds).
  * There are 52 cards in a deck, no jokers.
  * This code is to be used in ICE1. When you create your own branch,
- * add your name as a modifier (Modified By Stuart Bollinger)
+ * add your name as a modifier
  hello.
  * @author lamsteve
  */
@@ -19,6 +19,21 @@ public class Card {
 
    private String suit; //clubs, spades, diamonds, hearts
    private int value;//1-13
+   
+   Card(){}
+   
+   Card(int value, String suit){
+       setCard(value,suit);
+   }
+   
+   public void setCard(int value, String suit){
+       this.value = value;
+       this.suit = suit;
+   }
+   
+   public String getCard(){
+       return getValue() + " of " + getSuit();
+   }
 
    public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
     /**
@@ -48,7 +63,4 @@ public class Card {
     public void setValue(int value) {
         this.value = value;
     }
-   
-   
-    
 }
