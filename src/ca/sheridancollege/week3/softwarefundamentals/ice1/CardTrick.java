@@ -1,32 +1,55 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Modifier: Saif Badr
+ * Student number:991533775
  */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
-
+import java.util.Random;
+import java.util.Scanner;
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
+ *
  * @author dancye
  */
-public class CardTrick {
-    
-    public static void main(String[] args)
-    {
-        Card[] magicHand = new Card[7];
-        
-        for (int i=0; i<magicHand.length; i++)
-        {
-            Card c = new Card();
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-        }
-        
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
-    }
-    
+public class CardTrick
+{
+
+   public static void main (String[] args)
+   {
+      Card[] magicHand = new Card[7];
+      Random rnd = new Random();
+      Scanner scan = new Scanner(System.in);
+
+      for (int i = 0; i < magicHand.length; i++) {
+         Card c = new Card();
+         c.setValue(rnd.nextInt(13));
+         c.setSuit(Card.SUITS[rnd.nextInt(3)]);
+      }
+
+      Card c1 = new Card();
+
+      //insert code to ask the user for Card value and suit, create their card
+      System.out.println("please enter a number from 1-12");
+      c1.setValue(scan.nextInt());
+      System.out.println("please enter a suit number for your card , (Hearts = 0 , Diamonds = 1 , Spades = 2 , Clubs = 3)");
+      c1.setSuit(Card.SUITS[scan.nextInt()]);
+
+      // and search magicHand here
+      boolean status = false;
+      for (int i = 0; i < magicHand.length; i++) {
+         if (c1.equals(magicHand)) {
+            status = true;
+         }
+      }
+      if (status = true) {
+         System.out.println("Congrats , your card is in the magic hand");
+      }
+
+      else {
+         System.out.println("oops , your card isn't in the magic hand");
+      }
+
+   }
+
 }
