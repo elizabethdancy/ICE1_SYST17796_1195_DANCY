@@ -19,31 +19,34 @@ public class CardTrick {
         // Magic Hand array
         Card[] magicHand = new Card[7];
 
+        // Lucky card object
+        Card luckyCard = new Card();
+        luckyCard.setValue(1);
+        luckyCard.setSuit("Hearts");
+
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
             
-            // Lucky card object
-            Card luckyCard = new Card();
-            luckyCard.setValue(1);
-            luckyCard.setSuit("Hearts")
-                
-            Random rand = new Random();          
+            Random rand = new Random();
             c.setSuit(Card.SUITS[rand.nextInt(4)]);
             c.setValue(rand.nextInt(13));
 
             magicHand[i] = c;
         }
 
-        // Asking user to enter suit
-        System.out.print("Enter card suit: ");
-        String cardSuit = input.nextLine();
-
-        // Asking user to enter value
-        System.out.print("Enter card value: ");
-        int cardValue = input.nextInt();
+//        // Asking user to enter suit
+//        System.out.print("Enter card suit: ");
+//        String cardSuit = input.nextLine();
+//
+//        // Asking user to enter value
+//        System.out.print("Enter card value: ");
+//        int cardValue = input.nextInt();
+        
+        System.out.println("Value: " + luckyCard.getValue());
+        System.out.println("Suit: " + luckyCard.getSuit());
 
         for (int i = 0; i < magicHand.length; i++) {
-            if (magicHand[i].getValue() == cardValue && magicHand[i].getSuit().equals(cardSuit)) {
+            if (magicHand[i].getValue() == luckyCard.getValue() && magicHand[i].getSuit().equals(luckyCard.getSuit())) {
                 System.out.println("You card is in the magic hand");
                 break;
             } else {
