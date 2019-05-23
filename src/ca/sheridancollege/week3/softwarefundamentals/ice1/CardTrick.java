@@ -37,7 +37,7 @@ public class CardTrick {
         {    
             Card c = new Card();
             c.setValue((int)(Math.random() * 13) + 1);
-            c.setSuit(Card.SUITS[(int)(Math.random() * 3)]);
+            c.setSuit(Card.SUITS[(int)(Math.random() * 4)]);
             System.out.println(c.getValue());
             System.out.println(c.getSuit());
             magicHand[i] = c;
@@ -81,9 +81,10 @@ public class CardTrick {
         System.out.println(userCard.getSuit());
         
         */
+        
         Card luckyCard = new Card();
         luckyCard.setValue(2);
-        luckyCard.setSuit(3);
+        luckyCard.setSuit(luckyCard.SUITS[3]);
         
         
         for (int i = 0; i < magicHand.length; i++) {
