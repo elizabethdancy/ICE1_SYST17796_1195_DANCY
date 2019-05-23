@@ -27,6 +27,8 @@ public class CardTrick {
             c.setSuit( NumberToSuit(Math.random()*4)); 
             magicHand[i]=c;
         }
+        //add a (hard-coded) Card Object called luckyCard with a the number 4 and suit "Heart"
+        Card luckyCard=new Card(4, "Heart");
         
         //insert code to ask the user for Card value and suit, create their card
         Scanner input=new Scanner(System.in);        
