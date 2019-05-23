@@ -29,6 +29,7 @@ public class CardTrick {
             c.setValue((int)(Math.random() * 13 + 1));
             c.setSuit(Card.SUITS[(int)(Math.random() * 4)]);
             if ((c.getValue() == valueGuess)&&(c.getSuit().equals(suitGuess))){
+                gameOver = true;
                 break;
             }else{
                System.out.println(c.getValue() + " of " + c.getSuit());
