@@ -30,18 +30,21 @@ public class CardTrick {
             magicHand[i]=c;
         }
         
-        System.out.println("Pick a card value (1-13): ");
-        int value = k.nextInt();
-        System.out.println("Pick a card suit (Hearts, Spades, Diamonds, Clubs): ");
-        String suit = k.next();
-        Card c = new Card();
-        c.setValue(value);
-        c.setSuit(suit);
+        //System.out.println("Pick a card value (1-13): ");
+        //int value = k.nextInt();
+        //System.out.println("Pick a card suit (Hearts, Spades, Diamonds, Clubs): ");
+        //String suit = k.next();
+        //Card c = new Card();
+        //c.setValue(value);
+        //c.setSuit(suit);
         //insert code to ask the user for Card value and suit, create their card
         
+        Card luckyCard = new Card();
+        luckyCard.setValue(12);
+        luckyCard.setSuit("Hearts");
         boolean found = false;
         for(int i = 0; i < magicHand.length; i++){
-            if ((magicHand[i].getSuit().equals(c.getSuit())&&magicHand[i].getValue()==c.getValue())){
+            if ((magicHand[i].getSuit().equals(luckyCard.getSuit())&&magicHand[i].getValue()==luckyCard.getValue())){
                 found = true;      
                }
            }
