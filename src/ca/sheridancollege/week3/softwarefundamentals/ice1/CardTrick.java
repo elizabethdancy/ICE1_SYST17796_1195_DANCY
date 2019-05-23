@@ -30,7 +30,16 @@ public class CardTrick {
             magicHand[i] = c; 
 
         }
-  
+        
+        //add a hard-coded Card Object called luckyCard
+        
+        Card luckyCard = new Card();
+        
+        luckyCard.setValue(4);
+        
+        luckyCard.setSuit("Clubs");
+        
+       
         Scanner in = new Scanner(System.in);
         
         System.out.println("Please enter a card number: ");
@@ -52,8 +61,7 @@ public class CardTrick {
         else
                
             System.out.println("Card is not in hand.");
-        
-//        System.out.println(Arrays.toString(magicHand));              
+                    
     }
 }
 
