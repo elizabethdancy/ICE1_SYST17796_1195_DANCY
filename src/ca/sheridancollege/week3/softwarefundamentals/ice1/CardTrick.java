@@ -36,6 +36,7 @@ public class CardTrick {
         }
 
         //insert code to ask the user for Card value and suit, create their card
+        /*
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter a card value");
         int value = scan.nextInt();
@@ -46,9 +47,9 @@ public class CardTrick {
 
         // and search magicHand here
         //Then report the result here
-        boolean result = true;
+       
 
-        /***
+       
         
         for (int i = 0; i < magicHand.length; i++) {
 
@@ -67,16 +68,17 @@ public class CardTrick {
         } else {
             System.out.println("Sorry, Try Again!");
         }
-        */
+        ***/
         
         Card luckyCard=new Card();
         
         luckyCard.setValue(1);
         luckyCard.setSuit("Hearts");
+         boolean result = true;
         
            for (int i = 0; i < magicHand.length; i++) {
 
-            if (magicHand[i].getValue() == luckyCard.getvalue() && magicHand[i].equals(luckyCard.getSuit());{
+            if (magicHand[i].getValue() == luckyCard.getValue() && magicHand[i].equals(luckyCard.getSuit())){
 
                 result = true;
                 break;
