@@ -37,7 +37,7 @@ public class CardTrick {
         //insert code to ask the user for Card value and suit, create their card
 //        System.out.print("\nPlease enter a card value: ");
 //        userCard = input.nextInt();
-//        
+
 //        System.out.print(" and a suit: ");
 //        userSuit = input.next();
         
