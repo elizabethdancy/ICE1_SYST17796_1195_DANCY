@@ -28,7 +28,7 @@ public class CardTrick {
             magicHand[i]=c;
         }
         //add a (hard-coded) Card Object called luckyCard with a the number 4 and suit "Heart"
-        Card luckyCard=new Card(4, "Heart");
+        Card luckyCard=new Card(4, "Hearts");
         
         //insert code to ask the user for Card value and suit, create their card
         Scanner input=new Scanner(System.in);        
