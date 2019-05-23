@@ -19,11 +19,9 @@ public class CardTrick {
         Card[] magicHand = new Card[7];
         
         int randomCard = (int)(Math.random() * 13 + 1);
-        int randomSuit = (int)(Math.random() * 4 + 1);
-        int Cardnum;
-        int Cardsuit;
+        int randomSuit = (int)(Math.random() * 3 + 1);
         
-        Card luckyCard = new Card ();
+        Card luckyCard = new Card();
         luckyCard.setValue(2);
         luckyCard.setSuit(Card.SUITS[2]);
         
@@ -38,22 +36,17 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
-        Scanner in = new Scanner(System.in);
-        System.out.println("Pick a card; any card");
-        
-        Cardnum = in.nextInt();
-        Cardsuit = in.nextInt();
-        
         for (int i=0; i<magicHand.length; i++)
         {
-        if(magicHand[i].getSuit().equals(Cardsuit) && magicHand[i].getValue() == Cardnum)
+        if(magicHand[i].getSuit().equals("Spades") && magicHand[i].getValue() == 2)
         {
             System.out.println("Your card was in the magic hand!");
+            System.exit(0);
         }
         
         else{
         }
-        System.out.println("Your card wasn't in the magic hand...");
         }
+        System.out.println("Your card wasn't in the magic hand...");
     }
 }
