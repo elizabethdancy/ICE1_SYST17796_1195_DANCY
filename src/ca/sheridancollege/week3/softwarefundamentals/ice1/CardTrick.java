@@ -19,9 +19,14 @@ public class CardTrick {
     public static void main(String[] args) {
         Card[] magicHand = new Card[7];
         Scanner in = new Scanner(System.in);
+        
+             //Card luckyCard = new Card();
+            // luckyCard.setValue(2);
+            //luckyCard.setSuit("Hearts");
 
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
+            
             //c.setValue(insert call to random number generator here)
             c.setValue((int) (Math.random() * (7 - 1)));
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
