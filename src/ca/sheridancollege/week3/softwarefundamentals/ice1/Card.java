@@ -71,7 +71,7 @@ public class Card
    public boolean equals (Object obj)
    {
       Card that = (Card) obj;
-      if (this.getSuit() == that.getSuit()) {
+      if (this.getSuit().equalsIgnoreCase(that.getSuit())) {
          if (this.getValue() == that.getValue()) {
             return true;
          }
