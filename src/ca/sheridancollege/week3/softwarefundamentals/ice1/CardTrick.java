@@ -5,7 +5,7 @@ import java.util.Scanner;
 
  * @author dancye
  * Modified by Brent Sterling
- *
+ *making changes to fetch 
  */
 public class CardTrick
 {
