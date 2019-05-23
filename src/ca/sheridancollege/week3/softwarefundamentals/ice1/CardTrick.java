@@ -43,6 +43,7 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
+        /*
         
         do {
             try {
@@ -79,8 +80,14 @@ public class CardTrick {
         System.out.println(userCard.getValue());
         System.out.println(userCard.getSuit());
         
+        */
+        Card luckyCard = new Card();
+        luckyCard.setValue(2);
+        luckyCard.setSuit(3);
+        
+        
         for (int i = 0; i < magicHand.length; i++) {
-            if (userCard.equals(magicHand[i])) {
+            if (luckyCard.equals(magicHand[i])) {
                 winnerMsg = "You win!";
             }
         }
