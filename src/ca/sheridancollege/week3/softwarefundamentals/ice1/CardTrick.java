@@ -18,9 +18,9 @@ public class CardTrick {
     
     public static void main(String[] args){
         Card[] magicHand = new Card[7];
-        Card c = new Card();
         
         for (int i=0; i<magicHand.length; i++){
+            Card c = new Card();
             int ranCard = (int) (Math.random() * 13) + 1;
             //c.setValue(insert call to random number generator here)
             c.setValue(ranCard);
