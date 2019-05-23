@@ -23,21 +23,22 @@ public class CardTrick
       Scanner in = new Scanner(System.in);
       for (int i = 0; i < magicHand.length; i++) {
          Card c = new Card();
-         //c.setValue(insert call to random number generator here)
          c.setValue(rnd.nextInt(12) + 1);
-         //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
          c.setSuit(Card.SUITS[rnd.nextInt(3)]);
       }
 
-      Card c2 = new Card();
-      System.out.println("Please enter a value for your card (Integer only, 1-12)");
-      c2.setValue(in.nextInt());
-      System.out.println("Please enter a suit for your card (Integer value where 0=Hearts, 1=Diamonds, 2=Spades, and 3=Clubs");
-      c2.setSuit(Card.SUITS[in.nextInt()]);
+      Card c2 = new Card(9, "Spades");
 
-      //insert code to ask the user for Card value and suit, create their card
+
+//      Card c2 = new Card();
+//      System.out.println("Please enter a value for your card (Integer only, 1-12)");
+//      c2.setValue(in.nextInt());
+//      System.out.println("Please enter a suit for your card (Integer value where 0=Hearts, 1=Diamonds, 2=Spades, and 3=Clubs");
+//      c2.setSuit(Card.SUITS[in.nextInt()]);
+
+
       boolean inHand = false;
-      // and search magicHand here
+
       for (int i = 0; i < magicHand.length; i++) {
          if (c2.equals(magicHand[i])) {
             inHand = true;
@@ -49,7 +50,7 @@ public class CardTrick
       else {
          System.out.println("The card you chose was not in the hand");
       }
-      //Then report the result here
+
    }
 
 }
