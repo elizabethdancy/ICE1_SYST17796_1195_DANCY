@@ -5,6 +5,7 @@
  */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
 
+import java.util.Scanner;
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
  * and then asks the user to pick a card and searches the array of cards
@@ -17,16 +18,38 @@ public class CardTrick {
     {
         Card[] magicHand = new Card[7];
         
+        int randomCard = (int)(Math.random() * 13 + 1);
+        int randomSuit = (int)(Math.random() * 4 + 1);
+        int Cardnum;
+        int Cardsuit;
+        
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            
+            c.setValue(randomCard);
+            
+            c.setSuit(Card.SUITS[randomSuit]);
+            
+            magicHand[i] = c;
         }
         
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
+        Scanner in = new Scanner(System.in);
+        System.out.println("Pick a card; any card");
+        
+        Cardnum = in.nextInt();
+        Cardsuit = in.nextInt();
+        
+        for (int i=0; i<magicHand.length; i++)
+        {
+        if(magicHand[i].getSuit().equals(Cardsuit) && magicHand[i].getValue() == Cardnum)
+        {
+            System.out.println("Your card was in the magic hand!");
+        }
+        
+        else{
+        }
+        System.out.println("Your card wasn't in the magic hand...");
+        }
     }
-    
 }
