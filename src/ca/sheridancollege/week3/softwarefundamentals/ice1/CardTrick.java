@@ -33,7 +33,7 @@ public class CardTrick
 //       c1.setValue(scan.nextInt());
 //       System.out.println("please enter a suit number for your card , (Hearts = 0 , Diamonds = 1 , Spades = 2 , Clubs = 3)");
 //       c1.setSuit(Card.SUITS[scan.nextInt()]);
-      
+
       Card luckyCard = new Card();
       luckyCard.setValue(11);
       luckyCard.setSuit("Spades");
@@ -52,7 +52,5 @@ public class CardTrick
       else {
          System.out.println("oops , your card isn't in the magic hand");
       }
-
    }
-
 }
