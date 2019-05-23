@@ -21,6 +21,8 @@ public class Card {
    private int value;//1-13
 
    public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
+    int setValue;
+    int setSuit;
     /**
      * @return the suit
      */
@@ -47,6 +49,11 @@ public class Card {
      */
     public void setValue(int value) {
         this.value = value;
+    }
+    
+    public String toString() {
+        return "\nValue: " + value + " Suit: " + suit;
+        
     }
    
    
