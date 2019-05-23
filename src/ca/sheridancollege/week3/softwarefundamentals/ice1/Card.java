@@ -14,6 +14,7 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * add your name as a modifier
  hello.
  * @author lamsteve
+ * @modifier taborda 5/23/2018 Student # 991556975
  */
 public class Card {
 
@@ -50,5 +51,7 @@ public class Card {
     }
    
    
-    
+    public String toString(){
+        return "\nValue: " + value + " Suit: " + suit;
+    }
 }
