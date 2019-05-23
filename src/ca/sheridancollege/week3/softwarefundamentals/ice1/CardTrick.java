@@ -14,13 +14,13 @@ import java.util.Scanner;
  */
 public class CardTrick {
     
-    public static void main(String[] args, int i)
+    public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
         
         for (Card magicHand1 : magicHand) {
             Card c = new Card();
-            
+             int i;
             c.setValue((int) (Math.random() * 13)+1);
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
             c.setSuit(Card.SUITS[(int)(Math.random() * 4)]);
