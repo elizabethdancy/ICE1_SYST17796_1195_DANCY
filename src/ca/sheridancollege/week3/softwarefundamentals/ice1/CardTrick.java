@@ -35,11 +35,11 @@ public class CardTrick {
         
         
         //insert code to ask the user for Card value and suit, create their card
-        System.out.print("\nPlease enter a card value: ");
-        userCard = input.nextInt();
-        
-        System.out.print(" and a suit: ");
-        userSuit = input.next();
+//        System.out.print("\nPlease enter a card value: ");
+//        userCard = input.nextInt();
+//        
+//        System.out.print(" and a suit: ");
+//        userSuit = input.next();
         
         //Hard-coded card within GitHub
         Card luckyCard = new Card();
@@ -47,8 +47,8 @@ public class CardTrick {
         luckyCard.setSuit("Spades");
 
         //Search magicHand and  report the result
-        if(Arrays.asList(magicHand).contains(userCard)){
-            if (Arrays.asList(magicHand).contains(userSuit))
+        if(Arrays.asList(magicHand).contains(luckyCard.getValue())){
+            if (Arrays.asList(magicHand).contains(luckyCard.getSuit()))
                 System.out.print("Congratulations, you got it!");
         }
         else
