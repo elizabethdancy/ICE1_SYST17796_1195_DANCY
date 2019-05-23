@@ -20,12 +20,15 @@ public class CardTrick {
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
+        Card luckyCard = new Card();
+        luckyCard.setValue(7);
+        luckyCard.setSuit("Clubs");
         
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
             Random rand = new Random();
-            c.setValue(rand.nextInt(13));
+            c.setValue(rand.nextInt(13)+1);
             c.setSuit(Card.SUITS[rand.nextInt(4)]);
             magicHand[i] = c;            
         }
