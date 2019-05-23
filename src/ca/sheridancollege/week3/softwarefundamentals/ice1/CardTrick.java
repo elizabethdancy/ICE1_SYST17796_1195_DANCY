@@ -40,27 +40,27 @@ public class CardTrick {
         luckyCard.setSuit("Clubs");
         
        
-        Scanner in = new Scanner(System.in);
-        
-        System.out.println("Please enter a card number: ");
-        
-        int uCard; 
-        uCard = in.nextInt();
+//        Scanner in = new Scanner(System.in);
+//        
+//        System.out.println("Please enter a card number: ");
+//        
+//        int uCard; 
+//        uCard = in.nextInt();
+//
+//        System.out.println("Please enter a suit: ");
+//        
+//        String uSuit;
+//        uSuit = in.next();
 
-        System.out.println("Please enter a suit: ");
-        
-        String uSuit;
-        uSuit = in.next();
 
+        if (Arrays.asList(magicHand).contains(luckyCard.getValue())) {
+            if (Arrays.asList(magicHand).contains(luckyCard.getSuit()))
 
-        if (Arrays.asList(magicHand).contains(uCard)) {
-            if (Arrays.asList(magicHand).contains(uSuit))
-
-            System.out.println("Yes!");
+            System.out.println("Yes! Card is in hand!");
         }
         else
                
-            System.out.println("Card is not in hand.");
+            System.out.println("Sorry! Card is not in hand.");
                     
     }
 }
