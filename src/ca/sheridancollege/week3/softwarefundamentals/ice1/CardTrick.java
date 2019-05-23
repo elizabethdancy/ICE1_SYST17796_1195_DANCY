@@ -23,22 +23,18 @@ public class CardTrick {
         System.out.println("Now guess the card suit: ");
         String suitGuess = input.next();
         boolean gameOver = false;
-        int counter = 0;
-        
-        do 
-            {for (int i=0; i<magicHand.length; i++){
-                Card c = new Card();
-                c.setValue((int)(Math.random() * 50 + 1));
-                c.setSuit(Card.SUITS[(int)(Math.random() * 3) + 1]);
-                if ((c.getValue() == valueGuess)&&(c.getSuit().equals(suitGuess))){
-                    gameOver = true;
-                }else{
-                    System.out.println(c.getValue() + " of " + c.getSuit());
-                    counter++;
-                }                    
+    
+        for (int i=0; i<magicHand.length; i++){
+            Card c = new Card();
+            c.setValue((int)(Math.random() * 13 + 1));
+            c.setSuit(Card.SUITS[(int)(Math.random() * 4)]);
+            if ((c.getValue() == valueGuess)&&(c.getSuit().equals(suitGuess))){
+                break;
+            }else{
+               System.out.println(c.getValue() + " of " + c.getSuit());
+               }
             }
-        }while(counter <= 7);
-        
+            
         if (gameOver == false){
             System.out.println("Game over, no match, better luck next time!");
         }else if (gameOver){
