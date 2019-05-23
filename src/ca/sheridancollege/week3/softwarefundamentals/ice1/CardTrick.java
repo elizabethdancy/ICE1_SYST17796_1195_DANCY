@@ -48,6 +48,8 @@ public class CardTrick {
         //Then report the result here
         boolean result = true;
 
+        /***
+        
         for (int i = 0; i < magicHand.length; i++) {
 
             if (magicHand[i].getValue() == value && magicHand[i].equals(suit)) {
@@ -65,6 +67,31 @@ public class CardTrick {
         } else {
             System.out.println("Sorry, Try Again!");
         }
+        */
+        
+        Card luckyCard=new Card();
+        
+        luckyCard.setValue(1);
+        luckyCard.setSuit("Hearts");
+        
+           for (int i = 0; i < magicHand.length; i++) {
+
+            if (magicHand[i].getValue() == luckyCard.getvalue() && magicHand[i].equals(luckyCard.getSuit());{
+
+                result = true;
+                break;
+            }
+
+            result = false;
+
+        }
+                if (result) {
+            System.out.println("Congrats! You win");
+        } else {
+            System.out.println("Sorry, Try Again!");
+        }
+        
+        
 
     }
 
