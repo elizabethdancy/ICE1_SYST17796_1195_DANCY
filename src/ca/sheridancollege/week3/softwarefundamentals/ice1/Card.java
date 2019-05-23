@@ -67,14 +67,12 @@ public class Card
       this.value = value;
    }
 
-   @Override
-   public boolean equals (Object obj)
+
+   public boolean equalCard (Object obj)
    {
       Card that = (Card) obj;
-      if (this.getSuit().equalsIgnoreCase(that.getSuit())) {
-         if (this.getValue() == that.getValue()) {
-            return true;
-         }
+      if (this.suit.equals(that.suit) && this.getValue() == that.getValue()) {
+         return true;
       }
       return false;
    }

@@ -37,7 +37,7 @@ public class CardTrick
       boolean inHand = false;
 
       for (int i = 0; i < magicHand.length; i++) {
-         if (c2.equals(magicHand[i])) {
+         if (c2.equalCard(magicHand[i])) {
             inHand = true;
          }
       }
