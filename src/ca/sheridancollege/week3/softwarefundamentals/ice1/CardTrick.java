@@ -23,6 +23,10 @@ public class CardTrick {
         int Cardnum;
         int Cardsuit;
         
+        Card luckyCard = new Card ();
+        luckyCard.setValue(2);
+        luckyCard.setSuit(Card.SUITS[2]);
+        
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
