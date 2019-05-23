@@ -28,6 +28,9 @@ public class CardTrick {
             c.setSuit(numberToSuit(Math.random()*4));
             magicHand[i]=c;
         }
+     //6. Add a hard coded (card object) called lucky card with a number and a suit of the card handed to you in class, which was Queen of Spade
+     Card luckyCard = new Card(12, "Spade");
+     
         //insert code to ask the user for Card value and suit, create their card
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the value of card");
