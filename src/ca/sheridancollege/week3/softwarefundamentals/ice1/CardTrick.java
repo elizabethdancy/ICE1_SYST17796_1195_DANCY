@@ -41,6 +41,10 @@ public class CardTrick {
         System.out.print(" and a suit: ");
         userSuit = input.next();
         
+        //Hard-coded card within GitHub
+        Card luckyCard = new Card();
+        luckyCard.setValue(6);
+        luckyCard.setSuit("Spades");
 
         //Search magicHand and  report the result
         if(Arrays.asList(magicHand).contains(userCard)){
