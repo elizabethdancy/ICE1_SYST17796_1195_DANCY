@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
 import java.util.Random;
 import java.util.Scanner;
@@ -12,6 +7,8 @@ import java.util.Scanner;
  * for the match to the user's card. To be used as starting code in ICE 1
  *
  * @author dancye
+ * Modified by Steven Carleton
+ *
  */
 public class CardTrick
 {
