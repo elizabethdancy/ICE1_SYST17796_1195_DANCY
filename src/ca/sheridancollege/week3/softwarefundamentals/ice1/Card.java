@@ -14,7 +14,8 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * add your name as a modifier
  hello.
  * @author Muhammad Khan according to the In Class Exercise
- */
+ * Student Number 991456703
+ *
 public class Card {
 
    private String suit; //clubs, spades, diamonds, hearts
