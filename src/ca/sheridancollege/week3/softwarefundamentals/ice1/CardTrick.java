@@ -29,11 +29,14 @@ public class CardTrick
 
       Card c1 = new Card();
 
-      //insert code to ask the user for Card value and suit, create their card
-      System.out.println("please enter a number from 1-12");
-      c1.setValue(scan.nextInt());
-      System.out.println("please enter a suit number for your card , (Hearts = 0 , Diamonds = 1 , Spades = 2 , Clubs = 3)");
-      c1.setSuit(Card.SUITS[scan.nextInt()]);
+//       System.out.println("please enter a number from 1-12");
+//       c1.setValue(scan.nextInt());
+//       System.out.println("please enter a suit number for your card , (Hearts = 0 , Diamonds = 1 , Spades = 2 , Clubs = 3)");
+//       c1.setSuit(Card.SUITS[scan.nextInt()]);
+      
+      Card luckyCard = new Card();
+      luckyCard.setValue(11);
+      luckyCard.setSuit("Spades");
 
       // and search magicHand here
       boolean status = false;
