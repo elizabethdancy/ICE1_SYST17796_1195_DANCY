@@ -15,9 +15,9 @@ import java.util.Scanner;
  */
 public class CardTrick
 {
- 
-   
-   
+
+
+
    public static void main (String[] args)
    {
       //make an array for cards
@@ -33,16 +33,16 @@ public class CardTrick
 
          int cardNum = rnd.nextInt(13) + 1;
          int suit = rnd.nextInt(4) + 1;
-         
+
          c.setValue(cardNum);
          c.setSuit(Card.SUITS[rnd.nextInt(4) + 1]);
-         
-         int cardNum2 = rnd.nextInt(13)+1;
-         int suit2 = rnd.nextInt(4)+1;
-         
+
+         int cardNum2 = rnd.nextInt(13) + 1;
+         int suit2 = rnd.nextInt(4) + 1;
+
          luckyCard.setValue(cardNum2);
          luckyCard.setSuit(Card.SUITS[rnd.nextInt(4) + 1]);
-        
+
          magicHand[i] = c;
          luckyHand[i] = luckyCard;
          //c.setValue(insert call to random number generator here)
@@ -52,24 +52,24 @@ public class CardTrick
       System.out.println("Please input a card number");
       int selectedCard = scan.nextInt();
       int secondCard = scan.nextInt();
-      
+
       System.out.println("Please input a suit for your card");
       String selectedSuit = scan.nextLine();
       String secondSuit = scan.nextLine();
-      
+
       Card userCard = new Card();
-      Card secondCard = new Card();
-      
+      Card newCard = new Card();
+
       userCard.setValue(selectedCard);
       userCard.setSuit(selectedSuit);
-      
-      secondCard.setValue(secondCard);
-      secondCard.setSuit(secondSuit);
+
+      newCard.setValue(secondCard);
+      newCard.setSuit(secondSuit);
       //insert code to ask the user for Card value and suit, create their card
 
       // and search luckyHand here
-    
-    for (int i = 0; i < magicHand.length; i++) {
+
+      for (int i = 0; i < magicHand.length; i++) {
          if ((magicHand[i].getSuit().equals(selectedSuit)) && (magicHand[i].getValue() == (selectedCard))) {
             System.out.println("Great! Your card matches with the magic hand");
          }
@@ -77,8 +77,8 @@ public class CardTrick
             System.out.println("Sorry! Your card doesn't match with the magic hand");
          }
       }
-    
-    
+
+
       for (int i = 0; i < luckyHand.length; i++) {
          if ((luckyHand[i].getSuit().equals(secondSuit)) && (luckyHand[i].getValue() == (secondCard))) {
             System.out.println("Great! Your card matches with the lucky hand");
@@ -91,7 +91,7 @@ public class CardTrick
 
 
 
-      
+
    }
 
 }
