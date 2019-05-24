@@ -42,13 +42,5 @@ public class CardTrick {
         Card luckyCard = new Card();
         luckyCard.setValue(13);
         luckyCard.setSuit("Diamond");
-        
-        //Then report the result here
-        if(Arrays.asList(magicHand).contains(luckyCard.getValue())){
-            if(Arrays.asList(magicHand).contains(luckyCard.getSuit()))
-                System.out.println("The magic hand contained your lucky cards! The king of diamonds!");
-        }
-        else
-            System.out.println("The magic hand did not contain your lucky card! Unlucky!");
     }
 }
