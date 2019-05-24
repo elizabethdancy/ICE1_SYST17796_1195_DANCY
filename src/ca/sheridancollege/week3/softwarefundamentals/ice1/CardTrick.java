@@ -16,12 +16,12 @@ import java.util.*;
 public class CardTrick {
     
     public static void main(String[] args)
-    {
+    {   
+        Scanner scan = new Scanner(System.in);
         Card[] magicHand = new Card[7];
         
         for (int i=0; i<magicHand.length; i++)
         {
-            
             Card c = new Card();
             //c.setValue(insert call to random number generator here)
             c.setValue(((int)Math.random()*13)+1);
@@ -30,19 +30,25 @@ public class CardTrick {
             c.setSuit(Card.SUITS[((int)Math.random()*4)]);
             magicHand[i] = c;
         }
+        
         //insert code to ask the user for Card value and suit, create their card
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Enter a card value:");
-        int userCard = scan.nextInt();
-        System.out.println("Enter a card suit");
-        String userSuit = scan.next();
+        //System.out.println("Enter a card value:");
+        //int userCard = scan.nextInt();
+        //System.out.println("Enter a card suit");
+        //String userSuit = scan.next();
+        
+        //Using GitHub to edit branch before merging
+        //Hard-Coded King of Diamonds
+        Card luckyCard = new Card();
+        luckyCard.setValue(13);
+        luckyCard.setSuit("Diamond");
         
         //Then report the result here
-        if(Arrays.asList(magicHand).contains(userCard)){
-            System.out.print("This is your card!");
-        }else
-            System.out.println("Your card is not available");
-        
-        System.out.println(Arrays.toString(magicHand));
+        if(Arrays.asList(magicHand).contains(luckyCard.getValue())){
+            if(Arrays.asList(magicHand).contains(luckyCard.getSuit()))
+                System.out.println("The magic hand contained your lucky cards! The king of diamonds!");
+        }
+        else
+            System.out.println("The magic hand did not contain your lucky card! Unlucky!");
     }
 }
