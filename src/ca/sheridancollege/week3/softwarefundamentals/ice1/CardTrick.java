@@ -26,14 +26,7 @@ public class CardTrick
       //in order to make random card
       Random rnd = new Random(14);
       Scanner scan = new Scanner(System.in);
-for (int i = 0; i < magicHand.length; i++) {
-         if ((magicHand[i].getSuit().equals(selectedSuit)) && (magicHand[i].getValue() == (selectedCard))) {
-            System.out.println("Great! Your card matches with the magic hand");
-         }
-         else {
-            System.out.println("Sorry! Your card doesn't match with the magic hand");
-         }
-      }
+
       for (int i = 0; i < magicHand.length; i++) {
          Card c = new Card();
          Card luckyCard = new Card();
@@ -75,6 +68,17 @@ for (int i = 0; i < magicHand.length; i++) {
       //insert code to ask the user for Card value and suit, create their card
 
       // and search luckyHand here
+    
+    for (int i = 0; i < magicHand.length; i++) {
+         if ((magicHand[i].getSuit().equals(selectedSuit)) && (magicHand[i].getValue() == (selectedCard))) {
+            System.out.println("Great! Your card matches with the magic hand");
+         }
+         else {
+            System.out.println("Sorry! Your card doesn't match with the magic hand");
+         }
+      }
+    
+    
       for (int i = 0; i < luckyHand.length; i++) {
          if ((luckyHand[i].getSuit().equals(secondSuit)) && (luckyHand[i].getValue() == (secondCard))) {
             System.out.println("Great! Your card matches with the lucky hand");
