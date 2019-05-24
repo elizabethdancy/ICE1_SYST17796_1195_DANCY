@@ -11,7 +11,7 @@ import java.util.*;
  * A class that fills a magic hand of 7 cards with random Card Objects
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
- * @author dancye
+ * @author dancye, andre
  */
 public class CardTrick {
     
@@ -31,7 +31,7 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
-        //insert code to ask the user for Card value and suit, create their card
+        //Insert code to ask the user for Card value and suit, create their card
         //System.out.println("Enter a card value:");
         //int userCard = scan.nextInt();
         //System.out.println("Enter a card suit");
@@ -42,5 +42,13 @@ public class CardTrick {
         Card luckyCard = new Card();
         luckyCard.setValue(13);
         luckyCard.setSuit("Diamond");
+        
+        //Updated condition to display winning or losing message
+        if(Arrays.asList(magicHand).contains(luckyCard.getValue())){
+            if(Arrays.asList(magicHand).contains(luckyCard.getSuit()))
+                System.out.println("The magic hand contained your lucky cards! The king of diamonds!");
+        }
+        else
+            System.out.println("The magic hand did not contain your lucky card! Unlucky!");
     }
 }
