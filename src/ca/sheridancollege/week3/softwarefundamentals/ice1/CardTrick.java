@@ -37,11 +37,14 @@ public class CardTrick {
             System.out.println(magicHand[a].getValue());
         }
         
-        Scanner sc = new Scanner (System.in);
+        /*Scanner sc = new Scanner (System.in);
         System.out.println("Guess the card Suit and Value (any card): ");
         
         String suitValue = sc.next();
         int cardValue = sc.nextInt();
+        */
+        String suitValue = "hearts";
+        int cardValue = 3;
         
         //Then report the result here
         for (int j = 0; j<magicHand.length; j++){
